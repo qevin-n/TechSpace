@@ -1,0 +1,24 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Logs
+*.log
+
+# PHP configuration files
+backend/config.php
+
+# Database backups
+*.sql
+
+# Environment variables
+.env
+
+# Temporary files
+*.tmp
+
+# Cache
+.cache/
