@@ -62,4 +62,31 @@ class Course
 
         return $course ?: null;
     }
+    public function all(): array
+{
+    $stmt = $this->db->query("
+        SELECT *
+        FROM courses
+        ORDER BY id DESC
+    ");
+
+    return $stmt->fetchAll();
+}
+public function find(int $id): ?array
+{
+    $stmt = $this->db->prepare("
+        SELECT *
+        FROM courses
+        WHERE id = :id
+        LIMIT 1
+    ");
+
+    $stmt->execute([
+        ':id' => $id
+    ]);
+
+    $course = $stmt->fetch();
+
+    return $course ?: null;
+}
 }

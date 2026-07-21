@@ -33,7 +33,11 @@ href="/TechSpace/public/assets/css/style.css">
 
 <h2>
 
-<?= htmlspecialchars($course['title']) ?>
+<a href="?page=course&id=<?= $course['id'] ?>">
+
+    <?= htmlspecialchars($course['title']) ?>
+
+</a>
 
 </h2>
 

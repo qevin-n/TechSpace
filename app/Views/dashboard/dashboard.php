@@ -1,55 +1,65 @@
 <section class="dashboard">
 
-    <div class="dashboard-header">
+    <div class="dashboard-hero">
 
-        <h1>Dashboard</h1>
+        <div>
 
-        <p>
-            Welcome back,
-            <strong><?= htmlspecialchars($user['first_name']) ?></strong> 👋
-        </p>
+            <h1>
+                Welcome back,
+                <?= htmlspecialchars($user['first_name']) ?> 👋
+            </h1>
 
-        <p>
-            Continue your ICT & Multimedia learning journey.
-        </p>
+            <p>
+                Continue learning ICT & Multimedia with TechSpace.
+            </p>
+
+        </div>
+
+        <div class="hero-date">
+
+            <h3>
+
+                <?= date('l') ?>
+
+            </h3>
+
+            <p>
+
+                <?= date('F j, Y') ?>
+
+            </p>
+
+        </div>
 
     </div>
 
     <div class="stats-grid">
 
-        <div class="stat-card">
+<?php
 
-            <h3>👨‍🎓 Students</h3>
+$icon = "👨‍🎓";
+$title = "Students";
+$value = $students;
+require __DIR__ . '/../components/stat-card.php';
 
-            <h2><?= $students ?></h2>
+$icon = "👨‍💼";
+$title = "Admins";
+$value = $admins;
+require __DIR__ . '/../components/stat-card.php';
 
-        </div>
+$icon = "📚";
+$title = "Courses";
+$value = $courses;
+require __DIR__ . '/../components/stat-card.php';
 
-        <div class="stat-card">
+$icon = "👤";
+$title = "Role";
+$value = ucfirst($user['role']);
+require __DIR__ . '/../components/stat-card.php';
 
-            <h3>👨‍💼 Admins</h3>
+?>
 
-            <h2><?= $admins ?></h2>
-
-        </div>
-
-        <div class="stat-card">
-
-            <h3>📚 Courses</h3>
-
-            <h2><?= $courses ?></h2>
-
-        </div>
-
-        <div class="stat-card">
-
-            <h3>👤 Role</h3>
-
-            <h2><?= htmlspecialchars($user['role']) ?></h2>
-
-        </div>
-
-    </div>
+</div>
 
     <div class="dashboard-section">
 
@@ -72,5 +82,34 @@
         </div>
 
     </div>
+    <div class="dashboard-section">
+
+    <h2>Recent Courses</h2>
+
+    <div class="course-list">
+
+        <?php foreach ($courseList ?? [] as $course): ?>
+
+            <div class="course-item">
+
+                <h3>
+
+                    <?= htmlspecialchars($course['title']) ?>
+
+                </h3>
+
+                <p>
+
+                    <?= htmlspecialchars($course['category']) ?>
+
+                </p>
+
+            </div>
+
+        <?php endforeach; ?>
+
+    </div>
+
+</div>
 
 </section>

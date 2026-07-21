@@ -22,4 +22,22 @@ class CourseController
             'courses' => $this->courseModel->getAll()
         ];
     }
+    public function show(int $id): array
+{
+    $course = $this->courseModel->find($id);
+
+    if (!$course) {
+
+        http_response_code(404);
+
+        die("Course not found.");
+
+    }
+
+    return [
+
+        'course' => $course
+
+    ];
+}
 }

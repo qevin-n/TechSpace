@@ -33,7 +33,8 @@ class DashboardController
 
             'admins' => $this->userModel->countAdmins(),
 
-            'courses' => $this->courseModel->count()
+            'courses'   => $this->courseModel->count(),
+'courseList' => $this->courseModel->all(),
 
         ];
     }

@@ -123,6 +123,19 @@ switch ($page) {
         $controller->logout();
 
         break;
+        case 'course':
+
+    $controller = new CourseController();
+
+    $data = $controller->show((int)($_GET['id'] ?? 0));
+
+    View::render(
+        'courses/show',
+        $data,
+        'app'
+    );
+
+    break;
 
     default:
 
