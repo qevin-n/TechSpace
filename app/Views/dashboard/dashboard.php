@@ -1,82 +1,76 @@
-<!DOCTYPE html>
+<section class="dashboard">
 
-<html lang="en">
+    <div class="dashboard-header">
 
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>Dashboard</title>
-
-<link rel="stylesheet"
-href="/TechSpace/public/assets/css/style.css">
-
-<link rel="stylesheet"
-href="/TechSpace/public/assets/css/components.css">
-
-</head>
-
-<body>
-
-<?php require 'sidebar.php'; ?>
-
-<div class="main-content">
-
-    <?php require 'topbar.php'; ?>
-
-    <section>
-
-        <h2>
-
-            Dashboard
-
-        </h2>
+        <h1>Dashboard</h1>
 
         <p>
-
-            Welcome to TechSpace!
-
+            Welcome back,
+            <strong><?= htmlspecialchars($user['first_name']) ?></strong> 👋
         </p>
 
-<div>
+        <p>
+            Continue your ICT & Multimedia learning journey.
+        </p>
 
-    <h3>Platform Statistics</h3>
+    </div>
 
-    <ul>
+    <div class="stats-grid">
 
-        <li>
-            Students:
-            <strong><?= $students ?></strong>
-        </li>
+        <div class="stat-card">
 
-        <li>
-            Admins:
-            <strong><?= $admins ?></strong>
-        </li>
+            <h3>👨‍🎓 Students</h3>
 
-        <li>
-            Courses:
-            <strong><?= $courses ?></strong>
-        </li>
+            <h2><?= $students ?></h2>
 
-        <li>
-            Logged in as:
-            <strong><?= htmlspecialchars($user['role']) ?></strong>
-        </li>
+        </div>
 
-    </ul>
+        <div class="stat-card">
 
-</div>
+            <h3>👨‍💼 Admins</h3>
 
-    </section>
+            <h2><?= $admins ?></h2>
 
-    <?php require 'footer.php'; ?>
+        </div>
 
-</div>
+        <div class="stat-card">
 
-</body>
+            <h3>📚 Courses</h3>
 
-</html>
+            <h2><?= $courses ?></h2>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>👤 Role</h3>
+
+            <h2><?= htmlspecialchars($user['role']) ?></h2>
+
+        </div>
+
+    </div>
+
+    <div class="dashboard-section">
+
+        <h2>Quick Actions</h2>
+
+        <div class="actions">
+
+            <a href="?page=courses" class="btn">
+                Browse Courses
+            </a>
+
+            <a href="?page=resources" class="btn">
+                Learning Resources
+            </a>
+
+            <a href="?page=projects" class="btn">
+                Student Projects
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
