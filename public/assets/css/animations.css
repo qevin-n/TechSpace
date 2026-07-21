@@ -1,0 +1,968 @@
+/* ==========================================
+        TECHSPACE ANIMATIONS
+=========================================== */
+
+
+/* ==========================================
+        GLOBAL TRANSITIONS
+=========================================== */
+
+
+* {
+
+    transition:
+    color .3s ease,
+    background .3s ease,
+    border-color .3s ease,
+    transform .3s ease;
+
+}
+
+
+
+
+
+/* ==========================================
+        KEYFRAMES
+=========================================== */
+
+
+@keyframes fadeUp {
+
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+@keyframes fadeDown {
+
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(-30px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+@keyframes fadeLeft {
+
+
+    from {
+
+        opacity:0;
+
+        transform:translateX(-60px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+
+
+@keyframes fadeRight {
+
+
+    from {
+
+        opacity:0;
+
+        transform:translateX(60px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+
+
+
+@keyframes floating {
+
+
+    0% {
+
+        transform:translateY(0);
+
+    }
+
+
+    50% {
+
+        transform:translateY(-15px);
+
+    }
+
+
+    100% {
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+
+@keyframes pulseGlow {
+
+
+    0% {
+
+        box-shadow:
+        0 0 0 rgba(250,204,21,0);
+
+    }
+
+
+    50% {
+
+        box-shadow:
+        0 0 30px rgba(250,204,21,.35);
+
+    }
+
+
+    100% {
+
+        box-shadow:
+        0 0 0 rgba(250,204,21,0);
+
+    }
+
+}
+
+
+
+
+
+@keyframes roadmapReveal {
+
+
+    from {
+
+        opacity:0;
+
+        transform:
+        translateY(60px)
+        scale(.9);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+}
+
+
+
+
+
+@keyframes glowPulse {
+
+
+    0% {
+
+        opacity:.4;
+
+    }
+
+
+    50% {
+
+        opacity:1;
+
+    }
+
+
+    100% {
+
+        opacity:.4;
+
+    }
+
+}
+
+
+
+
+
+/* ==========================================
+            NAVBAR
+=========================================== */
+
+
+.navbar {
+
+
+    animation:
+
+    fadeDown .8s ease forwards;
+
+
+}
+
+
+
+
+
+/* ==========================================
+            HERO ANIMATIONS
+=========================================== */
+
+
+.hero-text {
+
+
+    animation:
+
+    fadeLeft 1s ease forwards;
+
+
+}
+
+
+
+
+.hero-image {
+
+
+    animation:
+
+    fadeRight 1s ease forwards;
+
+
+}
+
+
+
+
+.hero-image img {
+
+
+    animation:
+
+    floating 4s ease-in-out infinite;
+
+
+}
+
+
+
+
+
+.hero-badge {
+
+
+    animation:
+
+    pulseGlow 3s infinite;
+
+
+}
+
+
+
+
+
+/* ==========================================
+            BUTTON EFFECTS
+=========================================== */
+
+
+.btn {
+
+
+    position:relative;
+
+    overflow:hidden;
+
+
+}
+
+
+
+.btn::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    top:0;
+
+    left:-120%;
+
+
+    width:100%;
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.35),
+
+        transparent
+
+    );
+
+
+    transition:.6s;
+
+
+}
+
+
+
+
+.btn:hover::before {
+
+
+    left:120%;
+
+
+}
+
+
+
+
+
+.btn:hover {
+
+
+    transform:
+
+    translateY(-4px);
+
+
+}
+
+
+
+
+
+/* ==========================================
+            CARD ANIMATIONS
+=========================================== */
+
+
+.program-card,
+.project-card,
+.feature-card {
+
+
+    animation:
+
+    fadeUp .8s ease forwards;
+
+
+}
+
+
+
+
+
+.program-card:hover,
+.project-card:hover,
+.feature-card:hover {
+
+
+    box-shadow:
+
+    0 20px 45px rgba(250,204,21,.15);
+
+
+}
+
+
+
+
+
+/* ==========================================
+            ROADMAP ANIMATION
+=========================================== */
+
+
+.path-card {
+
+
+    opacity:0;
+
+
+    animation:
+
+    roadmapReveal .8s ease forwards;
+
+
+}
+
+
+
+
+.path-card:nth-child(1) {
+
+
+    animation-delay:.1s;
+
+}
+
+
+
+.path-card:nth-child(2) {
+
+
+    animation-delay:.3s;
+
+}
+
+
+
+.path-card:nth-child(3) {
+
+
+    animation-delay:.5s;
+
+}
+
+
+
+.path-card:nth-child(4) {
+
+
+    animation-delay:.7s;
+
+}
+
+
+
+
+
+.path-card:hover .path-number {
+
+
+    transform:
+
+    rotate(360deg);
+
+
+}
+
+
+
+
+
+/* ==========================================
+            ICON ANIMATION
+=========================================== */
+
+
+.icon-box {
+
+
+    position:relative;
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+
+.icon-box::after {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:100%;
+
+    height:100%;
+
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(250,204,21,.35),
+
+        transparent 70%
+
+    );
+
+
+    transform:scale(0);
+
+
+    transition:.5s;
+
+
+}
+
+
+
+
+.program-card:hover .icon-box::after,
+.feature-card:hover .icon-box::after {
+
+
+    transform:scale(2);
+
+
+}
+
+
+
+
+
+/* ==========================================
+            SECTION REVEAL
+=========================================== */
+
+
+.section-header {
+
+
+    animation:
+
+    fadeUp .9s ease forwards;
+
+
+}
+
+
+
+
+
+.cta-box {
+
+
+    animation:
+
+    fadeUp 1s ease forwards;
+
+
+}
+
+
+
+
+
+.cta-box:hover {
+
+
+    transform:
+
+    translateY(-8px);
+
+
+}
+
+
+
+
+
+.footer {
+
+
+    animation:
+
+    fadeUp 1s ease forwards;
+
+
+}
+
+
+
+
+
+/* ==========================================
+            SCROLL BEHAVIOR PREPARATION
+=========================================== */
+
+
+.reveal {
+
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+
+}
+
+
+
+
+
+.reveal.active {
+
+
+    opacity:1;
+
+    transform:translateY(0);
+
+
+}
+
+
+
+
+
+/* ==========================================
+        ACCESSIBILITY
+=========================================== */
+
+
+@media(prefers-reduced-motion:reduce){
+
+
+    * {
+
+
+        animation:none !important;
+
+        transition:none !important;
+
+
+    }
+
+
+}
+/* ==========================================
+        JAVASCRIPT REVEAL
+=========================================== */
+
+
+.program-card,
+.path-card,
+.project-card,
+.feature-card {
+
+    opacity:0;
+
+}
+
+
+
+.show {
+
+
+    animation:
+
+    fadeUp .8s ease forwards;
+
+
+}
+
+
+
+
+
+/* Ripple */
+
+
+.ripple {
+
+
+    position:absolute;
+
+    width:20px;
+
+    height:20px;
+
+
+    background:white;
+
+    border-radius:50%;
+
+
+    transform:scale(0);
+
+    animation:rippleEffect .6s linear;
+
+
+}
+
+
+
+@keyframes rippleEffect{
+
+
+    to{
+
+        transform:scale(15);
+
+        opacity:0;
+
+    }
+
+
+}/* Mobile menu animation */
+
+.nav-menu.active li {
+
+    animation:
+
+    fadeUp .4s ease forwards;
+
+}
+
+
+.nav-menu.active li:nth-child(1){
+
+    animation-delay:.05s;
+
+}
+
+
+.nav-menu.active li:nth-child(2){
+
+    animation-delay:.1s;
+
+}
+
+
+.nav-menu.active li:nth-child(3){
+
+    animation-delay:.15s;
+
+}
+
+
+.nav-menu.active li:nth-child(4){
+
+    animation-delay:.2s;
+
+}
+
+
+.nav-menu.active li:nth-child(5){
+
+    animation-delay:.25s;
+
+}
+
+
+.nav-menu.active li:nth-child(6){
+
+    animation-delay:.3s;
+
+}
+/* Social icons entrance */
+
+
+.social-icons a {
+
+
+    animation:
+
+    fadeUp .6s ease forwards;
+
+
+}
+
+
+
+.social-icons a:nth-child(1){
+
+    animation-delay:.1s;
+
+}
+
+
+.social-icons a:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+
+.social-icons a:nth-child(3){
+
+    animation-delay:.3s;
+
+}
+
+
+.social-icons a:nth-child(4){
+
+    animation-delay:.4s;
+
+}
+
+
+.social-icons a:nth-child(5){
+
+    animation-delay:.5s;
+
+}
+/* Scroll Progress */
+
+.scroll-progress{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+height:4px;
+
+width:0%;
+
+background:#F5C518;
+
+z-index:9999;
+
+}
+
+
+
+/* Back Button */
+
+
+.back-top{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:45px;
+
+height:45px;
+
+border-radius:50%;
+
+border:none;
+
+background:#F5C518;
+
+color:#000;
+
+font-size:22px;
+
+cursor:pointer;
+
+opacity:0;
+
+transform:translateY(20px);
+
+transition:.3s;
+
+z-index:999;
+
+}
+
+
+.back-top.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+
+
+/* Hero Floating */
+
+
+.floating img{
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+
+
+@keyframes float{
+
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+
+}

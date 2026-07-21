@@ -1,0 +1,1071 @@
+/* ==========================================
+        TECHSPACE RESPONSIVE DESIGN
+=========================================== */
+
+
+/* ==========================================
+        TABLET + MOBILE
+        BELOW 992px
+=========================================== */
+
+
+@media(max-width:992px){
+
+
+    /* ================= NAVBAR ================= */
+
+
+    .navbar {
+
+        padding:12px 20px;
+
+    }
+
+
+
+    .nav-menu {
+
+
+        position:fixed;
+
+
+        top:95px;
+
+
+        left:50%;
+
+
+        width:90%;
+
+
+        max-width:420px;
+
+
+        display:flex;
+
+
+        flex-direction:column;
+
+
+        gap:15px;
+
+
+        padding:25px;
+
+
+
+        background:
+
+        rgba(8,8,8,.96);
+
+
+
+        backdrop-filter:
+
+        blur(20px);
+
+
+
+        border:
+
+        1px solid rgba(250,204,21,.15);
+
+
+
+        border-radius:25px;
+
+
+
+        box-shadow:
+
+        0 25px 60px rgba(0,0,0,.6);
+
+
+
+        transform:
+
+        translate(-50%,-160%);
+
+
+
+        transition:.45s ease;
+
+
+
+        z-index:999;
+
+
+    }
+
+
+
+
+
+    .nav-menu.active {
+
+
+        transform:
+
+        translate(-50%,0);
+
+
+    }
+
+
+
+
+
+    .nav-menu li {
+
+
+        width:100%;
+
+
+    }
+
+
+
+
+
+    .nav-menu a {
+
+
+        width:100%;
+
+
+        padding:14px 18px;
+
+
+        display:flex;
+
+
+        align-items:center;
+
+
+        gap:12px;
+
+
+        border-radius:15px;
+
+
+
+        background:
+
+        rgba(255,255,255,.04);
+
+
+
+        color:white;
+
+
+
+    }
+
+
+
+
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+
+
+        background:
+
+        var(--primary);
+
+
+
+        color:#000;
+
+
+
+        transform:
+
+        translateX(5px);
+
+
+
+    }
+
+
+
+
+
+    .menu-toggle {
+
+
+        display:flex;
+
+
+        align-items:center;
+
+
+        justify-content:center;
+
+
+        width:45px;
+
+
+        height:45px;
+
+
+
+        border-radius:50%;
+
+
+
+        background:
+
+        rgba(255,255,255,.05);
+
+
+
+        border:
+
+        1px solid var(--border);
+
+
+
+        color:white;
+
+
+    }
+
+
+
+
+
+    .menu-toggle svg {
+
+
+        width:25px;
+
+
+        height:25px;
+
+
+    }
+
+
+
+
+
+    .nav-actions .btn {
+
+
+        display:none;
+
+
+    }
+
+
+
+
+
+
+
+    /* ================= HERO ================= */
+
+
+    .hero {
+
+
+        grid-template-columns:1fr;
+
+
+        text-align:center;
+
+
+        padding-top:150px;
+
+
+        gap:40px;
+
+
+    }
+
+
+
+
+
+    .hero-text p {
+
+
+        margin-left:auto;
+
+
+        margin-right:auto;
+
+
+    }
+
+
+
+
+
+    .hero-buttons {
+
+
+        justify-content:center;
+
+
+    }
+
+
+
+
+
+
+
+    /* ================= STATS ================= */
+
+
+    .stats-grid {
+
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+
+    }
+
+
+
+
+
+
+
+    /* ================= PROGRAMS ================= */
+
+
+    .program-grid {
+
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+
+    }
+
+
+
+
+
+
+
+    /* ================= ROADMAP ================= */
+
+
+    .paths-grid {
+
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+
+    }
+
+
+
+
+
+    .paths-grid::before {
+
+
+        display:none;
+
+
+    }
+
+
+
+
+
+
+
+    /* ================= PROJECTS ================= */
+
+
+    .project-grid {
+
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+
+    }
+
+
+
+
+
+
+
+    /* ================= FEATURES ================= */
+
+
+    .features-grid {
+
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+
+    }
+
+
+
+
+
+
+
+    /* ================= COMMUNITY ================= */
+
+
+    .community-wrapper {
+
+
+        grid-template-columns:1fr;
+
+
+        text-align:center;
+
+
+    }
+
+
+
+
+
+    .community-buttons {
+
+
+        justify-content:center;
+
+
+    }
+
+
+
+
+
+
+
+    /* ================= FOOTER ================= */
+
+
+    .footer-grid {
+
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================
+            MOBILE
+        BELOW 600px
+=========================================== */
+
+
+@media(max-width:600px){
+
+
+
+    /* ================= GLOBAL ================= */
+
+
+    section {
+
+
+        padding:70px 0;
+
+
+    }
+
+
+
+    .container {
+
+
+        width:90%;
+
+
+    }
+
+
+
+
+
+
+
+    /* ================= NAVBAR ================= */
+
+
+    .navbar {
+
+
+        padding:10px 15px;
+
+
+    }
+
+
+
+
+
+    .logo img {
+
+
+        width:120px;
+
+
+    }
+
+
+
+
+
+    .nav-menu {
+
+
+        width:92%;
+
+
+        top:85px;
+
+
+    }
+
+
+
+
+
+
+
+    /* ================= HERO ================= */
+
+
+    .hero {
+
+
+        padding-top:120px;
+
+
+    }
+
+
+
+
+
+    .hero h1 {
+
+
+        font-size:2.3rem;
+
+
+    }
+
+
+
+
+
+    .hero-buttons {
+
+
+        flex-direction:column;
+
+
+    }
+
+
+
+
+
+    .hero-buttons .btn {
+
+
+        width:100%;
+
+
+    }
+
+
+
+
+
+
+
+    /* ================= STATS ================= */
+
+
+    .stats-grid {
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+
+
+
+
+
+    /* ================= PROGRAMS ================= */
+
+
+    .program-grid {
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+
+
+
+
+
+    /* ================= MOBILE ROADMAP ================= */
+
+
+    .paths-grid {
+
+
+        grid-template-columns:1fr;
+
+
+        padding-left:35px;
+
+
+    }
+
+
+
+
+
+    .paths-grid::before {
+
+
+        display:block;
+
+
+        content:"";
+
+
+        position:absolute;
+
+
+        left:12px;
+
+
+        top:0;
+
+
+        width:3px;
+
+
+        height:100%;
+
+
+
+        background:
+
+        linear-gradient(
+
+        var(--primary),
+
+        rgba(250,204,21,.15)
+
+        );
+
+
+    }
+
+
+
+
+
+
+
+    .path-card {
+
+
+        text-align:left;
+
+
+        padding:
+
+        35px 25px 35px 40px;
+
+
+    }
+
+
+
+
+
+    .path-number {
+
+
+        position:absolute;
+
+
+        left:-25px;
+
+
+        top:35px;
+
+
+
+        width:55px;
+
+
+        height:55px;
+
+
+
+        font-size:1.1rem;
+
+
+    }
+
+
+
+
+
+    .path-card:hover {
+
+
+        transform:
+
+        translateX(8px);
+
+
+    }
+
+
+
+
+
+
+
+    /* ================= PROJECTS ================= */
+
+
+    .project-grid {
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+
+
+
+    .project-card img {
+
+
+        height:200px;
+
+
+    }
+
+
+
+
+
+
+
+    /* ================= FEATURES ================= */
+
+
+    .features-grid {
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+
+
+
+
+
+    /* ================= COMMUNITY ================= */
+
+
+    .community-text h2 {
+
+
+        font-size:2rem;
+
+
+    }
+
+
+
+
+
+    .community-buttons {
+
+
+        flex-direction:column;
+
+
+    }
+
+
+
+
+
+    .community-buttons .btn {
+
+
+        width:100%;
+
+
+    }
+
+
+
+
+
+
+
+    /* ================= CTA ================= */
+
+
+    .cta-box {
+
+
+        padding:45px 20px;
+
+
+    }
+
+
+
+
+
+
+
+    /* ================= FOOTER ================= */
+
+
+    .footer-grid {
+
+
+        grid-template-columns:1fr;
+
+
+        text-align:center;
+
+
+    }
+
+
+
+
+
+    .footer-brand img {
+
+
+        margin:auto;
+
+
+    }
+
+
+
+
+
+    .social-icons {
+
+
+        justify-content:center;
+
+
+    }
+
+
+
+}
+/* ==========================================
+        PREMIUM MOBILE MENU
+=========================================== */
+
+
+@media(max-width:900px){
+
+
+
+.nav-menu{
+
+
+position:absolute;
+
+top:75px;
+
+left:20px;
+
+right:20px;
+
+
+background:
+rgba(15,15,15,0.95);
+
+
+backdrop-filter:blur(15px);
+
+
+border:1px solid var(--border);
+
+
+border-radius:18px;
+
+
+padding:25px;
+
+
+display:flex;
+
+flex-direction:column;
+
+
+gap:18px;
+
+
+opacity:0;
+
+
+visibility:hidden;
+
+
+transform:
+translateY(-20px);
+
+
+transition:.35s ease;
+
+
+}
+
+
+
+.nav-menu.active{
+
+
+opacity:1;
+
+
+visibility:visible;
+
+
+transform:
+translateY(0);
+
+
+}
+
+
+
+
+
+.nav-menu li a{
+
+
+display:flex;
+
+
+align-items:center;
+
+
+gap:12px;
+
+
+padding:12px 15px;
+
+
+border-radius:12px;
+
+
+transition:.3s;
+
+
+}
+
+
+
+
+
+.nav-menu li a:hover{
+
+
+background:
+rgba(245,197,24,.1);
+
+
+color:
+#F5C518;
+
+
+}
+
+
+
+
+.menu-toggle{
+
+
+display:flex;
+
+
+transition:.3s;
+
+
+}
+
+
+
+
+
+.menu-toggle.open{
+
+
+transform:
+rotate(90deg);
+
+
+}
+
+
+
+}
