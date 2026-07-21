@@ -46,9 +46,52 @@ switch ($page) {
     break;
 
     case 'login':
-        require_once __DIR__ . '/../app/Views/auth/login.php';
-        break;
 
+    $error = "";
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+        $controller = new App\Controllers\AuthController();
+
+        $result = $controller->login(
+            trim($_POST['email']),
+            $_POST['password']
+        );
+
+        if ($result['success']) {
+
+            header("Location: ?page=dashboard");
+            exit;
+
+        }
+
+        $error = $result['message'];
+
+    }
+
+    require_once __DIR__ . '/../app/Views/auth/login.php';
+
+    break;
+    case 'dashboard':
+
+    if (!isset($_SESSION['user'])) {
+
+        header("Location: ?page=login");
+
+        exit;
+
+    }
+
+    require_once __DIR__ . '/../app/Views/dashboard/dashboard.php';
+
+    break;
+    case 'logout':
+
+    $controller = new App\Controllers\AuthController();
+
+    $controller->logout();
+
+    break;
     default:
         http_response_code(404);
         echo "<h1>404 - Page Not Found</h1>";

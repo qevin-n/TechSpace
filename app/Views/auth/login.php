@@ -1,15 +1,19 @@
+<?php
+$error = $error ?? "";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Login | TechSpace</title>
+<title>Login | TechSpace</title>
 
-    <link rel="stylesheet" href="/TechSpace/public/assets/css/style.css">
-    <link rel="stylesheet" href="/TechSpace/public/assets/css/components.css">
+<link rel="stylesheet" href="/TechSpace/public/assets/css/style.css">
+<link rel="stylesheet" href="/TechSpace/public/assets/css/components.css">
 
 </head>
 
@@ -23,7 +27,17 @@
 
         <p>Login to your TechSpace account.</p>
 
-        <form method="POST">
+        <?php if(!empty($error)): ?>
+
+            <div class="alert alert-danger">
+
+                <?= htmlspecialchars($error) ?>
+
+            </div>
+
+        <?php endif; ?>
+
+        <form method="POST" action="?page=login">
 
             <input
                 type="email"
@@ -39,7 +53,9 @@
                 required
             >
 
-            <button class="btn btn-primary">
+            <button
+                type="submit"
+                class="btn btn-primary">
 
                 Login
 
@@ -53,7 +69,7 @@
 
             <a href="?page=register">
 
-                Register
+                Create one
 
             </a>
 
