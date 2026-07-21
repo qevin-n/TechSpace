@@ -74,13 +74,11 @@ switch ($page) {
     break;
     case 'dashboard':
 
-    if (!isset($_SESSION['user'])) {
+    $controller = new App\Controllers\DashboardController();
 
-        header("Location: ?page=login");
+    $data = $controller->index();
 
-        exit;
-
-    }
+    extract($data);
 
     require_once __DIR__ . '/../app/Views/dashboard/dashboard.php';
 
@@ -90,6 +88,17 @@ switch ($page) {
     $controller = new App\Controllers\AuthController();
 
     $controller->logout();
+
+    break;
+    case 'courses':
+
+    $controller = new App\Controllers\CourseController();
+
+    $data = $controller->index();
+
+    extract($data);
+
+    require_once __DIR__ . '/../app/Views/courses/index.php';
 
     break;
     default:

@@ -96,4 +96,27 @@ class User
 
         return $user;
     }
+    /**
+ * Count all registered students
+ */
+public function countStudents(): int
+{
+    $stmt = $this->db->query(
+        "SELECT COUNT(*) FROM users WHERE role='student'"
+    );
+
+    return (int)$stmt->fetchColumn();
+}
+
+/**
+ * Count all administrators
+ */
+public function countAdmins(): int
+{
+    $stmt = $this->db->query(
+        "SELECT COUNT(*) FROM users WHERE role='admin'"
+    );
+
+    return (int)$stmt->fetchColumn();
+}
 }

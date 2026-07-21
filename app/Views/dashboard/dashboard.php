@@ -1,56 +1,81 @@
-<?php
-
-$user = $_SESSION['user'];
-
-?>
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
 
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
 <title>Dashboard</title>
+
+<link rel="stylesheet"
+href="/TechSpace/public/assets/css/style.css">
+
+<link rel="stylesheet"
+href="/TechSpace/public/assets/css/components.css">
 
 </head>
 
 <body>
 
-<h1>
+<?php require 'sidebar.php'; ?>
 
-Welcome,
+<div class="main-content">
 
-<?= htmlspecialchars($user['first_name']) ?>
+    <?php require 'topbar.php'; ?>
 
-🎉
+    <section>
 
-</h1>
+        <h2>
 
-<p>
+            Dashboard
 
-You have successfully logged in.
+        </h2>
 
-</p>
+        <p>
 
-<p>
+            Welcome to TechSpace!
 
-Role:
+        </p>
 
-<strong>
+<div>
 
-<?= htmlspecialchars($user['role']) ?>
+    <h3>Platform Statistics</h3>
 
-</strong>
+    <ul>
 
-</p>
+        <li>
+            Students:
+            <strong><?= $students ?></strong>
+        </li>
 
-<a href="?page=logout">
+        <li>
+            Admins:
+            <strong><?= $admins ?></strong>
+        </li>
 
-Logout
+        <li>
+            Courses:
+            <strong><?= $courses ?></strong>
+        </li>
 
-</a>
+        <li>
+            Logged in as:
+            <strong><?= htmlspecialchars($user['role']) ?></strong>
+        </li>
+
+    </ul>
+
+</div>
+
+    </section>
+
+    <?php require 'footer.php'; ?>
+
+</div>
 
 </body>
 
